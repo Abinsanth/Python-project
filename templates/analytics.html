@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Analytics - Event Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Event Management System</h1>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/analytics" class="active">Analytics</a>
+            </nav>
+        </header>
+
+        <section>
+            <h2>Event Analytics</h2>
+            <div class="analytics-container">
+                <div class="analytics-card">
+                    <h3>Events by Date</h3>
+                    <img src="{{ date_graph }}" alt="Events by Date Chart">
+                </div>
+                <div class="analytics-card">
+                    <h3>Events by Organizer</h3>
+                    <img src="{{ organizer_graph }}" alt="Events by Organizer Chart">
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
